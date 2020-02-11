@@ -1,0 +1,83 @@
+bash-3.2$ java Flight
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 1
+Passenger name: Ann
+Boarding Group: C
+Sequence : 45
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 1
+Passenger name: Bob
+Boarding Group: A
+Sequence : 1
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 1
+Passenger name: Carol
+Boarding Group: B
+Sequence : 4
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 1
+Passenger name: Dave
+Boarding Group: A
+Sequence : 7
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 1
+Passenger name: Ed
+Boarding Group: A
+Sequence : 3
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Removing : Bob in seat A1
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Removing : Ed in seat A3
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Removing : Dave in seat A7
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Removing : Carol in seat B4
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Removing : Ann in seat C45
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 2
+Queue is empty.
+Enter an option
+1 to Add a passenger to the queue
+2 to Remove and print the first passenger
+3 to quit
+Your choice: 3
+bash-3.2$ 
