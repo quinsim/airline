@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author zjb
  * @author Trudy Howles  tmh@cs.rit.edu
  */
-public class HeapQueue implements PriorityQueue<Passenger> {
+public class HeapQueue implements PriorityQueue {
 
    /**
     * underlying heap storage

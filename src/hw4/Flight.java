@@ -1,17 +1,44 @@
+/*
+ * Flight.java
+ *
+ * Version:
+ *     1.1
+ *
+ * Revisions:
+ *     v1.0 02-07-20 - Initial write-up
+ *     v1.1 02-11-20 - Javadoc commenting
+ * 
+ */
 package hw4;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Class that simulates the creating and boarding of
+ *  Passengers on a pane.
+ * 
+ * @author Quinten Simet
+ * @author Andy Lok
+ */
 public class Flight {
 
-    private PriorityQueue<Passenger> queue = new LinkedQueue();
+    /**
+     * The LinkedList based queue used to store the Passengers who have been created
+     *  but have yet to board the plane
+     */
+    private PriorityQueue queue = new LinkedQueue();
 
+    /**
+     * The Heap based queue used to store the Passengers who have been created
+     *  but have yet to board the plane
+     */
     // private PriorityQueue<Passenger> queeu = new HeapQueue();
 
-    public Flight() {
-    }
-
+    /**
+     * The flight simulation that will run until the simulation
+     *  is terminated by entering the number 3 when prompted
+     */
     public void simulate() {
         Scanner userInterface = new Scanner(System.in);
         int userInput;
@@ -23,6 +50,13 @@ public class Flight {
         userInterface.close();
     }
     
+    /**
+     * Prompts and accepts the users input. Will validate the users response
+     *  and prompt the correct method to run based on the input
+     * 
+     * @param in Scanner used to read the users input from the console
+     * @return the value entered in by the user
+     */
     private int userInput(Scanner in) {
         System.out.print("Your choice: ");
         int userInput = 0;
@@ -36,7 +70,7 @@ public class Flight {
         switch (userInput) {
             case 1: addPassenger(in);
                     break;
-            case 2: removePassenger();
+            case 2: boardPassenger();
                     break;
             case 3: 
                     break;
@@ -46,6 +80,15 @@ public class Flight {
         return userInput;
     }
 
+    /**
+     * Simulates the creation of a Passenger. Prompts the user for
+     *  the neccesary information to create a Passenger, Creates the
+     *  Passenger object, and adds said Passenger into the boarding queue.
+     * 
+     * Assumes that all information entered by the user is valid
+     * 
+     * @param in Scanner used to read the users input from the console
+     */
     private void addPassenger(Scanner in) {
         String name;
         char boardingGroup;
@@ -64,7 +107,12 @@ public class Flight {
         queue.enqueue(me);
     }
 
-    private void removePassenger() {
+    /**
+     * Simulates the boarding of a Passenger. Will prompt the queue to remove
+     *  the Passenger at the head of the queue and print said Passenger
+     *  to the user
+     */
+    private void boardPassenger() {
         if (queue.isEmpty()) {
             System.out.println("Queue is empty");
         } else {
@@ -72,6 +120,12 @@ public class Flight {
         }
     }
 
+    /**
+     * Creates the prompt that is sent to the user to simulate
+     *  the flight
+     * 
+     * @return the prompt sent to the user for the flight simulation
+     */
     private String simulationPrompt() {
         String prompt = "Enter an option\n"
                       + "1. Add passenger to the boarding queue\n"
@@ -82,7 +136,7 @@ public class Flight {
     }
     
     public static void main(String[] args) {
-       Flight flight = new Flight();
-       flight.simulate(); 
-    }
+        Flight flight = new Flight();
+        flight.simulate(); 
+     }
 }
